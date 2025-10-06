@@ -74,6 +74,114 @@ section h3 {
   margin-bottom: 8px;
 }
 
+/* Participants section */
+.activity-card .participants {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed #c5cae9;
+}
+
+.activity-card .participants-title {
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #3949ab;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 8px;
+}
+
+.activity-card .participants-title::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #3949ab;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(57,73,171,0.15);
+}
+
+.activity-card .participants-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.activity-card .participants-list li {
+  background: linear-gradient(135deg,#e3f2fd,#f1f8ff);
+  border: 1px solid #bbdefb;
+  color: #0d47a1;
+  padding: 6px 12px 6px 8px;
+  border-radius: 24px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  transition: background .25s, box-shadow .25s, transform .25s;
+}
+
+.activity-card .participants-list li:hover {
+  background: #e8f4ff;
+  box-shadow: 0 3px 8px rgba(13,71,161,0.15);
+  transform: translateY(-2px);
+}
+
+.activity-card .participant-avatar {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  border-radius: 50%;
+  background: #1a237e;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 2px #fff, 0 2px 4px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.activity-card .participants-empty {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #607d8b;
+  background: #eceff1;
+  border: 1px dashed #b0bec5;
+  padding: 10px 12px;
+  border-radius: 6px;
+}
+
+@media (hover: none) {
+  .activity-card .participants-list li:hover {
+    transform: none;
+    box-shadow: 0 2px 5px rgba(13,71,161,0.12);
+  }
+}
+
+@media (max-width: 480px) {
+  .activity-card .participants-list {
+    gap: 6px;
+  }
+  .activity-card .participants-list li {
+    font-size: 0.7rem;
+    padding: 5px 10px 5px 6px;
+  }
+  .activity-card .participant-avatar {
+    width: 22px;
+    height: 22px;
+    font-size: 0.55rem;
+  }
+}
+
 .form-group {
   margin-bottom: 15px;
 }
